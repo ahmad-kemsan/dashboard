@@ -23,7 +23,7 @@ jobs:
       - name: Installing dependencies and build dashboard
         run: |
           npm install
-          export NODE_OPTIONS=--openssl-legacy-provider
+          npm audit fix --force
           npm run build
         
       - name: Zip files
